@@ -9,4 +9,4 @@ resources:
 images:
   - name: recall-app
     newName: us-east1-docker.pkg.dev/lineten/lineten-dev/recall-app
-    newTag: PLACEHOLDER  # Updated by CI/CD with commit SHA
+    newTag: fddeb304c2eee7d0511c8020f9eddeb6540ad2ab  # Updated by CI/CD with commit SHA
