@@ -10,8 +10,6 @@ Deployment manifests for applications on the LineTen GKE cluster.
 │   └── recall-app/
 │       ├── base/           # Base manifests
 │       └── overlays/dev/   # Dev environment
-├── infrastructure/
-│   └── atlantis/           # Terraform GitOps
 └── README.md
 ```
 
