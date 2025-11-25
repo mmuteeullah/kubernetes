@@ -17,6 +17,12 @@ spec:
           image: recall-app:latest
           ports:
             - containerPort: 80
+          env:
+            - name: ORIGIN_VERIFY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: recall-app-secrets
+                  key: ORIGIN_VERIFY_SECRET
           resources:
             requests:
               cpu: 50m
@@ -26,13 +32,13 @@ spec:
               memory: 128Mi
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: 80
             initialDelaySeconds: 5
             periodSeconds: 30
           readinessProbe:
             httpGet:
-              path: /
+              path: /health
               port: 80
             initialDelaySeconds: 3
             periodSeconds: 10
