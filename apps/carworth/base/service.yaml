@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: carworth
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8501
+  selector:
+    app: carworth
